@@ -1,0 +1,17 @@
+# Dependency updates enter the integration branch first, then reach production
+# through the same preview → main release process as other changes.
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    target-branch: preview
+    groups:
+      minor-and-patch:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch

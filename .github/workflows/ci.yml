@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - preview
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Vercel Remote Cache (set TURBO_TOKEN secret + TURBO_TEAM variable in the repo).
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+  TURBO_LOG_ORDER: grouped
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Full history so Turbo can compute the merge base for affected filters.
+          fetch-depth: 0
+
+      - name: Fetch preview base
+        if: github.event_name == 'pull_request'
+        run: git fetch --no-tags origin preview:refs/remotes/origin/preview
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Restore Turbo local cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ hashFiles('yarn.lock', 'turbo.json') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-${{ hashFiles('yarn.lock', 'turbo.json') }}-
+            turbo-${{ runner.os }}-
+
+      - name: Test (affected)
+        if: github.event_name == 'pull_request'
+        run: yarn turbo run test --filter="...[origin/preview]"
+
+      - name: Validate (affected)
+        if: github.event_name == 'pull_request'
+        run: yarn validate:affected
+
+      - name: Test (full)
+        if: github.event_name == 'workflow_dispatch'
+        run: yarn turbo run test
+
+      - name: Validate (full)
+        if: github.event_name == 'workflow_dispatch'
+        run: yarn validate

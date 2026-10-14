@@ -1,0 +1,50 @@
+{
+  "name": "web-app-template",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "vercel-build": "turbo run vercel-build --filter=@template/platform --env-mode=loose",
+    "start": "turbo run start",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate": "turbo run typecheck lint && yarn format && turbo run build",
+    "validate:affected": "turbo run typecheck lint --filter=\"...[origin/preview]\" && yarn format:check && turbo run build --filter=\"...[origin/preview]\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:coverage": "turbo run test:coverage",
+    "prepare": "husky",
+    "db:generate": "yarn workspace @template/db db:generate",
+    "db:migrate": "yarn workspace @template/db db:migrate",
+    "db:push": "yarn workspace @template/db db:push",
+    "db:studio": "yarn workspace @template/db db:studio"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "turbo": "^2.10.10"
+  },
+  "packageManager": "yarn@4.12.0",
+  "engines": {
+    "node": "24.x",
+    "yarn": ">=4.0.0",
+    "npm": ">=999.0.0"
+  },
+  "lint-staged": {
+    "apps/platform/**/*.{ts,tsx}": [
+      "eslint --fix --max-warnings 0 --config apps/platform/eslint.config.mjs",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  }
+}

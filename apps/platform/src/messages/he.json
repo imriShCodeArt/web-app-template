@@ -1,0 +1,410 @@
+{
+  "site": {
+    "name": "אפליקציית ווב",
+    "description": "שלד רב-לשוני לבניית אפליקציות ווב חדשות.",
+    "keywords": "אפליקציית ווב, שלד, תבנית"
+  },
+  "navigation": {
+    "home": "בית",
+    "about": "אודות",
+    "contact": "יצירת קשר",
+    "privacy": "מדיניות פרטיות",
+    "cookies": "מדיניות עוגיות",
+    "terms": "תנאי שימוש",
+    "accessibility": "הצהרת נגישות"
+  },
+  "cookies": {
+    "bannerAria": "בחירות פרטיות ועוגיות",
+    "intro": "אנו משתמשים בעוגיות ובטכנולוגיות דומות כדי להפעיל את האתר, לאבטח את החשבון שלך, לזכור את העדפת השפה שלך, למדוד שימוש ולשפר את השירות.",
+    "necessaryBlurb": "עוגיות חיוניות פעילות תמיד, משום שהן נדרשות לצורך התחברות, אבטחה ותפקוד בסיסי של האתר. בכפוף להסכמתך, נשתמש גם בעוגיות וטכנולוגיות אנליטיקה ושיווק/ייחוס, כגון Google Analytics ואחסון מקומי הקשור לשירותי Google.",
+    "choiceBlurb": "באפשרותך לאשר את כל העוגיות, לדחות עוגיות שאינן חיוניות, או להתאים את הבחירה שלך.",
+    "acceptAll": "אישור הכול",
+    "rejectNonEssential": "דחיית עוגיות לא חיוניות",
+    "customize": "התאמה אישית",
+    "privacyPolicy": "מדיניות פרטיות",
+    "cookiePolicy": "מדיניות עוגיות",
+    "dialogTitle": "העדפות עוגיות",
+    "save": "שמירת העדפות",
+    "cancel": "ביטול",
+    "footerLink": "הגדרות עוגיות",
+    "categories": {
+      "necessary": {
+        "title": "עוגיות חיוניות",
+        "description": "נדרשות לצורך התחברות, אבטחת חשבון, הגנה מפני CSRF, ניהול סשן ותפקוד ליבה של האתר. לא ניתן לכבות עוגיות אלו דרך לוח זה.",
+        "examples": "__Host-authjs.csrf-token\n__Secure-authjs.session-token\n__Secure-authjs.callback-url",
+        "switchAria": "עוגיות חיוניות (תמיד פעילות)"
+      },
+      "preferences": {
+        "title": "עוגיות העדפות",
+        "description": "משמשות לזכור את שפת הממשק והעדפות תצוגה שבחרת.",
+        "examples": "NEXT_LOCALE",
+        "switchAria": "עוגיות העדפות"
+      },
+      "analytics": {
+        "title": "עוגיות אנליטיקה",
+        "description": "משמשות להבין כיצד מבקרים משתמשים באתר, למדוד תנועה ולשפר את השירות.",
+        "examples": "_ga\n_ga_*",
+        "switchAria": "עוגיות אנליטיקה"
+      },
+      "marketing": {
+        "title": "שיווק וייחוס",
+        "description": "משמשות למדידת ביצועי קמפיינים, אירועי המרה וייחוס דרך טכנולוגיות Google.",
+        "examples": "_gcl_ls\nעוגיות Google Ads / DoubleClick, לפי העניין",
+        "switchAria": "עוגיות שיווק וייחוס"
+      }
+    }
+  },
+  "footer": {
+    "company": "דפים",
+    "legal": "מדיניות",
+    "rights": "כל הזכויות שמורות.",
+    "downloadPlugin": "הורדת תוסף וורדפרס",
+    "downloadPluginAria": "הורדת תוסף וורדפרס (קובץ ZIP)",
+    "contactForm": {
+      "title": "צרו קשר",
+      "description": "השאירו פרטים ונחזור אליכם באימייל.",
+      "descriptionExtended": "ספרו לנו מי אתם, במה אנחנו יכולים לעזור ונחזור אליכם בדוא\"ל.",
+      "nameLabel": "שם מלא",
+      "emailLabel": "דוא\"ל",
+      "phoneLabel": "טלפון",
+      "subjectLabel": "נושא",
+      "subjectHelper": "תקציר קצר של הפנייה",
+      "messageLabel": "הודעה",
+      "messageHelper": "לפחות {min} תווים - פירוט עוזר לנו להשיב מהר יותר.",
+      "companyLabel": "חברה",
+      "interestLabel": "אני מעוניין/ת ב",
+      "interestScan": "כללי",
+      "interestConsulting": "פרויקט",
+      "interestRemediation": "תמיכה",
+      "interestOther": "אחר",
+      "detailsLabel": "פרטים נוספים",
+      "detailsHelper": "ספרו לנו איך נוכל לעזור לכם",
+      "presetRemediationQuote": "אשמח לדבר על פרויקט חדש.",
+      "presetReportRequest": "יש לי שאלה על האתר.",
+      "presetConsultingRequest": "אשמח לעזרה כדי להתחיל.",
+      "errorInterest": "נא לבחור את תחום העניין.",
+      "submit": "שליחה",
+      "sending": "שולחים…",
+      "success": "תודה. ההודעה נשלחה.",
+      "errorRequired": "נא למלא את כל השדות.",
+      "errorEmail": "נא להזין כתובת דוא\"ל תקינה.",
+      "errorPhone": "נא להזין מספר טלפון תקין (7–15 ספרות).",
+      "errorGeneric": "משהו השתבש. נסו שוב בעוד רגע.",
+      "errorSubjectMin": "נא למלא נושא (לפחות {min} תווים).",
+      "errorMessageMin": "נא לכתוב הודעה (לפחות {min} תווים).",
+      "errorNotConfigured": "טופס יצירת הקשר אינו זמין כרגע. ניתן לפנות אלינו בדוא\"ל."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "כניסה לחשבונך",
+      "emailLabel": "כתובת אימייל",
+      "passwordLabel": "סיסמה",
+      "submit": "כניסה",
+      "googleCta": "המשך עם Google",
+      "noAccount": "אין לך חשבון?",
+      "signUpLink": "הרשמה",
+      "forgotPassword": "שכחת סיסמה?",
+      "invalidCredentials": "אימייל או סיסמה שגויים.",
+      "genericError": "משהו השתבש. אנא נסה שוב."
+    },
+    "oauthPopup": {
+      "completing": "משלימים את ההתחברות…"
+    },
+    "signUp": {
+      "title": "יצירת חשבון חדש",
+      "nameLabel": "שם מלא",
+      "emailLabel": "כתובת אימייל",
+      "websiteLabel": "כתובת אתר",
+      "websiteHint": "כתובת האתר שברצונכם לבדוק",
+      "passwordLabel": "סיסמה",
+      "acceptTerms": "אני מסכים/ה ל-<terms>תנאי השימוש</terms> ול-<privacy>מדיניות הפרטיות</privacy>.",
+      "acceptMarketing": "אני מסכים/ה לקבל מדי פעם דואר שיווקי.",
+      "termsRequired": "יש להסכים לתנאי השימוש ולמדיניות הפרטיות כדי להמשיך.",
+      "submit": "יצירת חשבון",
+      "googleCta": "המשך עם Google",
+      "hasAccount": "יש לך כבר חשבון?",
+      "signInLink": "כניסה",
+      "emailTaken": "כבר קיים חשבון עם אימייל זה.",
+      "genericError": "משהו השתבש. אנא נסה שוב."
+    },
+    "modal": {
+      "tabSignIn": "כניסה",
+      "tabSignUp": "הרשמה",
+      "forgotPasswordTitle": "שכחת סיסמה",
+      "close": "סגירה"
+    },
+    "termsPrompt": {
+      "title": "כמעט סיימנו",
+      "intro": "כדי להשתמש ב-אפליקציית ווב, יש לאשר את ההסכמה לתנאי השימוש ולמדיניות הפרטיות.",
+      "continue": "המשך",
+      "termsRequired": "יש להסכים לתנאי השימוש ולמדיניות הפרטיות כדי להמשיך.",
+      "error": "לא ניתן לשמור את ההסכמה. נסה/י שוב."
+    },
+    "marketingPrompt": {
+      "title": "ברוך/ה הבא/ה ל-אפליקציית ווב!",
+      "intro": "החשבון שלך מוכן. אפשר לעדכן את הפרופיל ולשלוח לנו הודעה בכל זמן.",
+      "marketingLabel": "אשמח לקבל טיפים, עדכונים והודעות שיווקיות. אפשר לבטל או לשנות זאת בכל עת.",
+      "continue": "המשך",
+      "skip": "המשך בלי עדכונים",
+      "error": "לא ניתן לשמור את הבחירה. נסה/י שוב."
+    },
+    "authError": {
+      "title": "בעיה בכניסה",
+      "loading": "טוען…",
+      "codeLabel": "קוד שגיאה",
+      "backToSignIn": "חזרה לכניסה",
+      "generic": "משהו השתבש במהלך ההתחברות. נסה שוב.",
+      "configuration": "בעיית הגדרות שרת (למשל כתובת callback של OAuth או מפתח Auth). אם הבעיה נמשכת, פנה לתמיכה.",
+      "accessDenied": "הגישה נדחתה. ייתכן שביטלת את ההתחברות דרך הספק.",
+      "verification": "קישור ההתחברות פג תוקף או כבר נוצל. נסה להתחבר שוב.",
+      "oauthAccountNotLinked": "כתובת האימייל כבר רשומה עם שיטת התחברות אחרת. התחבר תחילה באותה שיטה."
+    },
+    "verifyEmail": {
+      "title": "בדוק/י את האימייל",
+      "subtitle": "שלחנו הודעת אימות לכתובת <b>{email}</b>. הזן/י את הקוד בן 6 הספרות מהאימייל כדי להפעיל את החשבון.",
+      "otpLabel": "קוד אימות",
+      "otpPlaceholder": "123456",
+      "submit": "אמת/י כתובת אימייל",
+      "resendPrompt": "לא קיבלת אימייל?",
+      "resendCta": "שלח שוב",
+      "resendSuccess": "נשלח אימייל אימות חדש.",
+      "resendError": "לא ניתן היה לשלוח את האימייל מחדש. אנא נסה/י שוב.",
+      "invalidCode": "הקוד שגוי או פג תוקף. אנא נסה/י שוב.",
+      "genericError": "משהו השתבש. אנא נסה/י שוב.",
+      "successTitle": "האימייל אומת!",
+      "successBody": "החשבון שלך פעיל. מעביר/ה...",
+      "alreadyVerified": "כתובת האימייל שלך כבר אומתה.",
+      "backToHome": "חזרה לדף הבית"
+    },
+    "forgotPassword": {
+      "metaTitle": "שכחת סיסמה",
+      "metaDescription": "בקשת קישור לאיפוס הסיסמה ב-אפליקציית ווב.",
+      "title": "שכחת סיסמה",
+      "subtitle": "הזינו את כתובת האימייל של החשבון. אם קיימת סיסמה לחשבון, נשלח קישור לאיפוס.",
+      "submit": "שליחת קישור לאיפוס",
+      "successTitle": "בדקו את האימייל",
+      "successBody": "אם קיים חשבון עם סיסמה לכתובת זו, שלחנו קישור לאיפוס. הקישור בתוקף לשעה אחת.",
+      "genericError": "משהו השתבש. אנא נסה/י שוב.",
+      "backToSignIn": "חזרה לכניסה"
+    },
+    "resetPassword": {
+      "metaTitle": "איפוס סיסמה",
+      "metaDescription": "בחירת סיסמה חדשה לחשבון אפליקציית ווב.",
+      "title": "בחירת סיסמה חדשה",
+      "subtitle": "הסיסמה החדשה חייבת להכיל לפחות 8 תווים.",
+      "passwordLabel": "סיסמה חדשה",
+      "confirmPasswordLabel": "אימות סיסמה חדשה",
+      "submit": "עדכון סיסמה",
+      "tooShort": "הסיסמה חייבת להכיל לפחות 8 תווים.",
+      "mismatch": "הסיסמאות אינן תואמות.",
+      "invalidToken": "קישור האיפוס אינו תקין או שפג תוקפו. יש לבקש קישור חדש.",
+      "genericError": "משהו השתבש. אנא נסה/י שוב.",
+      "successTitle": "הסיסמה עודכנה",
+      "successBody": "אפשר להיכנס עכשיו עם הסיסמה החדשה.",
+      "signInCta": "כניסה"
+    },
+    "signOut": "יציאה",
+    "welcome": "שלום",
+    "welcomeNamed": "שלום, {name}",
+    "myAccount": "החשבון שלי",
+    "userMenu": {
+      "ariaLabel": "תפריט חשבון",
+      "profile": "פרופיל",
+      "appointments": "פגישות",
+      "lastScans": "סריקות אחרונות",
+      "settings": "הגדרות",
+      "crm": "מערכת CRM"
+    },
+    "account": {
+      "title": "החשבון שלי",
+      "subtitle": "ניהול פרופיל ופרטי ההתחברות שלך.",
+      "name": "שם",
+      "email": "אימייל",
+      "notProvided": "לא סופק",
+      "signedInWith": "מחובר/ת בתור",
+      "securityNote": "מטעמי אבטחה, מומלץ להתנתק ממכשירים משותפים.",
+      "profile": {
+        "company": "חברה",
+        "jobTitle": "תפקיד בארגון",
+        "jobTitleHint": "למשל מנכ״ל, מפתח/ת, שיווק, וכו'",
+        "website": "כתובת אתר",
+        "websiteHint": "הזינו את הדומיין; הקידומת https:// מתווספת אוטומטית.",
+        "websitePlaceholder": "https://example.com",
+        "websiteHostPlaceholder": "example.com",
+        "phone": "טלפון",
+        "address": "כתובת",
+        "emailHint": "לא ניתן לשנות כתובת אימייל כאן. לעדכון, פנה לתמיכה.",
+        "save": "שמירת שינויים",
+        "saving": "שומרים…",
+        "saved": "הפרופיל עודכן.",
+        "errorSave": "לא ניתן לשמור. נסה שוב.",
+        "errorNameRequired": "יש למלא את השם.",
+        "errorWebsiteRequired": "יש למלא את כתובת האתר.",
+        "errorWebsiteInvalid": "יש להזין כתובת אתר תקינה.",
+        "errorPhone": "הזן מספר טלפון תקין (7–15 ספרות), או השאר ריק.",
+        "localeLabel": "שפת ממשק מועדפת",
+        "marketingOptIn": "אני מסכים/ה לקבל דואר שיווקי (ניתן לשנות בכל עת).",
+        "pendingWebsiteHint": "החליפו את כתובת ההמתנה בכתובת האתר הציבורית."
+      },
+      "tabs": {
+        "ariaLabel": "אזורים בחשבון",
+        "details": "פרופיל",
+        "appointments": "פגישות",
+        "scans": "סריקות קודמות",
+        "settings": "הגדרות",
+        "subscription": "מנוי"
+      },
+      "appointments": {
+        "empty": "אין לכם פגישת ייעוץ קרובה.",
+        "bookCta": "קביעת פגישת ייעוץ",
+        "statusBooked": "הפגישה אושרה — נשלחה הזמנה ל-Google Meet.",
+        "statusPending": "ממתינה לאישור שלנו. נשלח מייל ברגע שתאושר.",
+        "statusVerifying": "יש להשלים אימות כרטיס כדי לאשר את הפגישה. הכרטיס לא יחויב כעת.",
+        "finishVerification": "המשך לאימות הכרטיס",
+        "when": "מועד",
+        "duration": "30 דקות",
+        "name": "שם",
+        "email": "אימייל",
+        "phone": "טלפון",
+        "joinMeet": "הצטרפות ל-Google Meet",
+        "reschedule": "בקשת מועד אחר",
+        "pickNewTime": "בחירת מועד חדש",
+        "noSlots": "אין כרגע מועדים פתוחים אחרים.",
+        "cancelReschedule": "ביטול",
+        "confirmTitle": "לבקש את המועד הזה?",
+        "confirmBody": "נעביר את הבקשה ל-{date} ונבקש מהצוות לאשר אותה. המועד הקודם יתפנה.",
+        "confirmReschedule": "בקשת מועד חדש",
+        "submitting": "שולחים…",
+        "slotTaken": "הזמן הזה כבר נלקח. אפשר לבחור זמן אחר.",
+        "errorGeneric": "משהו השתבש. נסו שוב.",
+        "rescheduleLimitReached": "אפשר לשנות את המועד עד 3 פעמים ב-30 יום. אם צריך מועד נוסף, פנו אלינו.",
+        "reschedulesLeft": "נותרו {count} בקשות שינוי ב-30 הימים הקרובים."
+      },
+      "scans": {
+        "empty": "עדיין לא הרצת סריקות. התחל מדף הבית.",
+        "cta": "סרקו את האתר עכשיו",
+        "view": "פתיחת דוח",
+        "deleteAria": "מחיקת סריקה",
+        "deleteDialogTitle": "למחוק את הסריקה?",
+        "deleteDialogBody": "הדוח עבור {domain} יימחק. לא ניתן לשחזר את הפעולה.",
+        "deleteConfirm": "מחיקה",
+        "deletingScan": "מוחקים…",
+        "deleteError": "לא ניתן למחוק את הסריקה. נסה שוב.",
+        "cancel": "ביטול",
+        "columns": {
+          "when": "תאריך",
+          "site": "אתר",
+          "status": "סטטוס",
+          "score": "ציון",
+          "action": "פעולות"
+        },
+        "status": {
+          "queued": "בתור",
+          "running": "רץ",
+          "completed": "הושלם",
+          "failed": "נכשל"
+        }
+      },
+      "subscription": {
+        "title": "מינוי",
+        "description": "פרטי חיוב ותוכנית יופיעו כאן לאחר חיבור ספק תשלומים.",
+        "placeholder": "בתבנית זו אין כרגע מינויים מלאים. ניתן לחבר Stripe או שירות אחר כשיהיו צורך בתוכניות בתשלום."
+      },
+      "settings": {
+        "title": "הגדרות חשבון",
+        "agreementsAccordion": "הסכמות ודיוור",
+        "marketingSaveHint": "ניתן לשמור דרך הכפתורים בתחתית העמוד, או יחד עם שאר הפרטים בלשונית «פרופיל».",
+        "dangerIntro": "מחיקת החשבון מסירה לצמיתות את הפרופיל.",
+        "deleteAccount": "מחיקת חשבון",
+        "dialogTitle": "למחוק את החשבון?",
+        "dialogBody": "פעולה זו אינה הפיכה. הפרופיל יימחק לצמיתות.",
+        "cancel": "ביטול",
+        "confirmDelete": "כן, למחוק את החשבון",
+        "deleting": "מוחקים…",
+        "errorDelete": "לא ניתן למחוק את החשבון. נסה שוב או פנה לתמיכה."
+      }
+    }
+  },
+  "common": {
+    "loading": "טוען...",
+    "error": "משהו השתבש.",
+    "retry": "נסה שוב",
+    "close": "סגור",
+    "prevMonth": "חודש קודם",
+    "nextMonth": "חודש הבא",
+    "openMenu": "פתח תפריט",
+    "closeMenu": "סגור תפריט",
+    "settings": {
+      "openMenu": "פתח הגדרות"
+    },
+    "theme": {
+      "switchToDark": "עבור למצב כהה",
+      "switchToLight": "עבור למצב בהיר"
+    }
+  },
+  "notFound": {
+    "metaTitle": "העמוד לא נמצא",
+    "metaDescription": "העמוד שחיפשתם לא קיים או שהועבר לכתובת אחרת.",
+    "title": "העמוד לא נמצא",
+    "description": "העמוד שחיפשת לא קיים או הועבר.",
+    "backHome": "חזרה לעמוד הבית"
+  },
+  "pages": {
+    "home": {
+      "metaTitle": "ברוכים הבאים",
+      "metaDescription": "שלד דו-לשוני עם חשבונות, טופס יצירת קשר ועמודי מדיניות.",
+      "heading": "כאן מתחילה אפליקציית הווב הבאה",
+      "intro": "השלד כולל מעטפת בעברית ובאנגלית, התחברות, עמוד חשבון ועמודים לדוגמה שאפשר להחליף."
+    },
+    "about": {
+      "metaTitle": "אודות",
+      "metaDescription": "על האתר הזה.",
+      "heading": "אודות",
+      "p1": "החליפו את העמוד הזה בסיפור של המוצר שאתם בונים."
+    },
+    "contact": {
+      "metaTitle": "יצירת קשר",
+      "metaDescription": "שליחת הודעה לצוות.",
+      "heading": "יצירת קשר",
+      "heroTitle": "דברו איתנו",
+      "intro": "השאירו פרטים ונחזור אליכם באימייל.",
+      "directEmail": "אימייל",
+      "directPhone": "טלפון",
+      "emailCopyAria": "העתקת כתובת האימייל",
+      "emailCopyHint": "לחצו כדי להעתיק את הכתובת",
+      "emailCopySuccess": "כתובת האימייל הועתקה.",
+      "phoneCopyAria": "העתקת מספר הטלפון",
+      "phoneCopyHint": "לחצו כדי להעתיק את המספר",
+      "phoneCopySuccess": "מספר הטלפון הועתק."
+    },
+    "cookies": {
+      "metaTitle": "מדיניות עוגיות",
+      "metaDescription": "איך האתר משתמש בעוגיות.",
+      "heading": "מדיניות עוגיות",
+      "lastUpdated": "עודכן לאחרונה: החליפו תאריך זה כשתפרסמו את המדיניות.",
+      "p1": "החליפו טקסט זה במדיניות העוגיות שלכם. הבאנר באתר יכול לזכור בחירות הכרחיות, העדפות ואנליטיקה."
+    },
+    "privacy": {
+      "metaTitle": "מדיניות פרטיות",
+      "metaDescription": "איך האתר מטפל במידע אישי.",
+      "heading": "מדיניות פרטיות",
+      "lastUpdated": "עודכן לאחרונה: החליפו תאריך זה כשתפרסמו את המדיניות.",
+      "p1": "החליפו טקסט זה במדיניות הפרטיות שלכם לפני שאתם אוספים מידע אישי ממבקרים."
+    },
+    "terms": {
+      "metaTitle": "תנאי שימוש",
+      "metaDescription": "התנאים לשימוש באתר.",
+      "heading": "תנאי שימוש",
+      "lastUpdated": "עודכן לאחרונה: החליפו תאריך זה כשתפרסמו את התנאים.",
+      "p1": "החליפו טקסט זה בתנאי השימוש שחלים על האתר ועל החשבונות."
+    },
+    "accessibility": {
+      "metaTitle": "הצהרת נגישות",
+      "metaDescription": "נגישות האתר.",
+      "heading": "הצהרת נגישות",
+      "lastUpdated": "עודכן לאחרונה: החליפו תאריך זה כשתפרסמו את ההצהרה.",
+      "p1": "החליפו טקסט זה בהצהרת הנגישות שלכם."
+    }
+  }
+}

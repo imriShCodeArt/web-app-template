@@ -1,0 +1,410 @@
+{
+  "site": {
+    "name": "Web App",
+    "description": "A multilingual starter for new web apps.",
+    "keywords": "web app, starter, template"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie policy",
+    "terms": "Terms of Service",
+    "accessibility": "Accessibility statement"
+  },
+  "cookies": {
+    "bannerAria": "Cookie and privacy choices",
+    "intro": "We use cookies and similar technologies to operate the website, keep your account secure, remember your language preference, measure usage, and improve our service.",
+    "necessaryBlurb": "Necessary cookies are always active because they are required for login, security, and core website functionality. With your consent, we also use analytics and marketing or attribution technologies such as Google Analytics and Google-related storage.",
+    "choiceBlurb": "You can accept all cookies, reject non-essential cookies, or customize your choices.",
+    "acceptAll": "Accept all",
+    "rejectNonEssential": "Reject non-essential",
+    "customize": "Customize",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "dialogTitle": "Cookie preferences",
+    "save": "Save preferences",
+    "cancel": "Cancel",
+    "footerLink": "Cookie settings",
+    "categories": {
+      "necessary": {
+        "title": "Necessary cookies",
+        "description": "Required for login, account security, CSRF protection, session management, and core website functionality. These cookies cannot be disabled through this panel.",
+        "examples": "__Host-authjs.csrf-token\n__Secure-authjs.session-token\n__Secure-authjs.callback-url",
+        "switchAria": "Necessary cookies (always on)"
+      },
+      "preferences": {
+        "title": "Preferences cookies",
+        "description": "Used to remember your selected language and interface preferences.",
+        "examples": "NEXT_LOCALE",
+        "switchAria": "Preferences cookies"
+      },
+      "analytics": {
+        "title": "Analytics cookies",
+        "description": "Used to understand how visitors use the website, measure traffic, detect usage patterns, and improve the service.",
+        "examples": "_ga\n_ga_*",
+        "switchAria": "Analytics cookies"
+      },
+      "marketing": {
+        "title": "Marketing and attribution",
+        "description": "Used to measure campaign performance, conversion events, and attribution through Google-related technologies.",
+        "examples": "_gcl_ls\nGoogle Ads / DoubleClick-related cookies, where applicable",
+        "switchAria": "Marketing and attribution cookies"
+      }
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "legal": "Legal",
+    "rights": "All rights reserved.",
+    "downloadPlugin": "Download WordPress plugin",
+    "downloadPluginAria": "Download the WordPress plugin (ZIP file)",
+    "contactForm": {
+      "title": "Contact us",
+      "description": "Leave your details and we will get back to you by email.",
+      "descriptionExtended": "Tell us who you are, what you need, and we will reply by email.",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "subjectLabel": "Subject",
+      "subjectHelper": "A short summary of your request",
+      "messageLabel": "Message",
+      "messageHelper": "At least {min} characters - context helps us respond faster.",
+      "companyLabel": "Company",
+      "interestLabel": "I'm interested in",
+      "interestScan": "General",
+      "interestConsulting": "Project",
+      "interestRemediation": "Support",
+      "interestOther": "Other",
+      "detailsLabel": "Additional details",
+      "detailsHelper": "Optional - share context that will help us respond.",
+      "presetRemediationQuote": "I would like to talk about a new project.",
+      "presetReportRequest": "I have a question about this website.",
+      "presetConsultingRequest": "I would like help getting started.",
+      "errorInterest": "Please choose what you are interested in.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you. Your message has been sent.",
+      "errorRequired": "Please fill in every field.",
+      "errorEmail": "Please enter a valid email address.",
+      "errorPhone": "Please enter a valid phone number (7–15 digits).",
+      "errorGeneric": "Something went wrong. Please try again in a moment.",
+      "errorSubjectMin": "Please enter a subject (at least {min} characters).",
+      "errorMessageMin": "Please enter a message (at least {min} characters).",
+      "errorNotConfigured": "The contact form is not available yet. Please reach out by email."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign in to your account",
+      "emailLabel": "Email address",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "googleCta": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "forgotPassword": "Forgot password?",
+      "invalidCredentials": "Invalid email or password.",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "oauthPopup": {
+      "completing": "Completing sign-in…"
+    },
+    "signUp": {
+      "title": "Create an account",
+      "nameLabel": "Name",
+      "emailLabel": "Email address",
+      "websiteLabel": "Website URL",
+      "websiteHint": "The site you want to audit (https:// or a domain).",
+      "passwordLabel": "Password",
+      "acceptTerms": "I agree to the <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+      "acceptMarketing": "I agree to receive occasional marketing emails (optional).",
+      "termsRequired": "Please agree to the Terms of Service and Privacy Policy to continue.",
+      "submit": "Create account",
+      "googleCta": "Continue with Google",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "emailTaken": "An account with this email already exists.",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "modal": {
+      "tabSignIn": "Sign in",
+      "tabSignUp": "Sign up",
+      "forgotPasswordTitle": "Forgot password",
+      "close": "Close"
+    },
+    "termsPrompt": {
+      "title": "Almost there",
+      "intro": "To use Web App, please confirm that you agree to our Terms of Service and Privacy Policy.",
+      "continue": "Continue",
+      "termsRequired": "Please agree to the Terms of Service and Privacy Policy to continue.",
+      "error": "Could not save your agreement. Please try again."
+    },
+    "marketingPrompt": {
+      "title": "Welcome to Web App",
+      "intro": "Your account is ready. You can update your profile and send us a message whenever you like.",
+      "marketingLabel": "I'd like tips, product updates, and promotional messages. You can unsubscribe or change this anytime.",
+      "continue": "Continue",
+      "skip": "Continue without updates",
+      "error": "Could not save your preference. Please try again."
+    },
+    "authError": {
+      "title": "Sign-in problem",
+      "loading": "Loading…",
+      "codeLabel": "Error code",
+      "backToSignIn": "Back to sign in",
+      "generic": "Something went wrong during sign-in. Please try again.",
+      "configuration": "Server configuration problem (for example OAuth callback URL or Auth secret). If this persists, contact support.",
+      "accessDenied": "Access was denied. You may have cancelled the provider sign-in.",
+      "verification": "The sign-in link expired or was already used. Try signing in again.",
+      "oauthAccountNotLinked": "This email is already registered with another sign-in method. Sign in with your original method first."
+    },
+    "verifyEmail": {
+      "title": "Check your email",
+      "subtitle": "We sent a verification email to <b>{email}</b>. Enter the 6-digit code from the email to activate your account.",
+      "otpLabel": "Verification code",
+      "otpPlaceholder": "123456",
+      "submit": "Verify email",
+      "resendPrompt": "Didn't receive an email?",
+      "resendCta": "Resend",
+      "resendSuccess": "A new verification email has been sent.",
+      "resendError": "Could not resend the email. Please try again.",
+      "invalidCode": "Invalid or expired verification code. Please try again.",
+      "genericError": "Something went wrong. Please try again.",
+      "successTitle": "Email verified!",
+      "successBody": "Your account is now active. Redirecting…",
+      "alreadyVerified": "Your email is already verified.",
+      "backToHome": "Go to home page"
+    },
+    "forgotPassword": {
+      "metaTitle": "Forgot password",
+      "metaDescription": "Request a link to reset your Web App password.",
+      "title": "Forgot password",
+      "subtitle": "Enter the email address for your account and we will send a reset link if it has a password.",
+      "submit": "Send reset link",
+      "successTitle": "Check your email",
+      "successBody": "If an account with that email has a password, we sent a reset link. It expires in one hour.",
+      "genericError": "Something went wrong. Please try again.",
+      "backToSignIn": "Back to sign in"
+    },
+    "resetPassword": {
+      "metaTitle": "Reset password",
+      "metaDescription": "Choose a new password for your Web App account.",
+      "title": "Choose a new password",
+      "subtitle": "Your new password must be at least 8 characters.",
+      "passwordLabel": "New password",
+      "confirmPasswordLabel": "Confirm new password",
+      "submit": "Update password",
+      "tooShort": "Password must be at least 8 characters.",
+      "mismatch": "Passwords do not match.",
+      "invalidToken": "This reset link is invalid or has expired. Request a new one.",
+      "genericError": "Something went wrong. Please try again.",
+      "successTitle": "Password updated",
+      "successBody": "You can now sign in with your new password.",
+      "signInCta": "Sign in"
+    },
+    "signOut": "Sign out",
+    "welcome": "Welcome",
+    "welcomeNamed": "Welcome, {name}",
+    "myAccount": "My account",
+    "userMenu": {
+      "ariaLabel": "Account menu",
+      "profile": "Profile",
+      "appointments": "Appointments",
+      "lastScans": "Last scans",
+      "settings": "Settings",
+      "crm": "CRM"
+    },
+    "account": {
+      "title": "My account",
+      "subtitle": "Manage your profile and session details.",
+      "name": "Name",
+      "email": "Email",
+      "notProvided": "Not provided",
+      "signedInWith": "Signed in as",
+      "securityNote": "For security, always sign out from shared devices.",
+      "profile": {
+        "company": "Company",
+        "jobTitle": "Role at company",
+        "jobTitleHint": "E.g. CEO, Developer, or Marketing.",
+        "website": "Website",
+        "websiteHint": "Enter your domain; https:// is added automatically.",
+        "websitePlaceholder": "https://example.com",
+        "websiteHostPlaceholder": "example.com",
+        "phone": "Phone",
+        "address": "Address",
+        "emailHint": "Email cannot be changed here. Contact support if you need to update it.",
+        "save": "Save changes",
+        "saving": "Saving…",
+        "saved": "Profile updated.",
+        "errorSave": "Could not save changes. Please try again.",
+        "errorNameRequired": "Enter your name.",
+        "errorWebsiteRequired": "Enter your website URL.",
+        "errorWebsiteInvalid": "Enter a valid website URL.",
+        "errorPhone": "Enter a valid phone number (7–15 digits), or leave empty.",
+        "localeLabel": "Preferred language",
+        "marketingOptIn": "I agree to receive marketing emails (you can change this anytime).",
+        "pendingWebsiteHint": "Replace the temporary placeholder with your real public website URL."
+      },
+      "tabs": {
+        "ariaLabel": "Account sections",
+        "details": "Profile",
+        "appointments": "Appointments",
+        "scans": "Past scans",
+        "settings": "Settings",
+        "subscription": "Subscription"
+      },
+      "appointments": {
+        "empty": "You do not have an upcoming consultation booked.",
+        "bookCta": "Book a consultation",
+        "statusBooked": "Confirmed — a Google Meet invitation has been sent.",
+        "statusPending": "Awaiting our approval. We will email you when it is confirmed.",
+        "statusVerifying": "Finish card verification to confirm this appointment. Your card will not be charged now.",
+        "finishVerification": "Continue card verification",
+        "when": "When",
+        "duration": "30 minutes",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "joinMeet": "Join Google Meet",
+        "reschedule": "Request a different time",
+        "pickNewTime": "Choose a new time",
+        "noSlots": "No other open times are available right now.",
+        "cancelReschedule": "Cancel",
+        "confirmTitle": "Request this new time?",
+        "confirmBody": "We will move your request to {date} and ask the team to approve it. The previous time will be released.",
+        "confirmReschedule": "Request new time",
+        "submitting": "Sending…",
+        "slotTaken": "That time was just taken. Please pick another.",
+        "errorGeneric": "Something went wrong. Please try again.",
+        "rescheduleLimitReached": "You can change this appointment up to 3 times in 30 days. Contact us if you need another time.",
+        "reschedulesLeft": "{count} reschedule requests left in the next 30 days."
+      },
+      "scans": {
+        "empty": "You have not run any scans yet. Start one from the home page.",
+        "cta": "Scan your website now",
+        "view": "Open audit",
+        "deleteAria": "Delete scan",
+        "deleteDialogTitle": "Delete this scan?",
+        "deleteDialogBody": "This removes the audit for “{domain}”. You cannot undo it.",
+        "deleteConfirm": "Delete scan",
+        "deletingScan": "Deleting…",
+        "deleteError": "Could not delete this scan. Please try again.",
+        "cancel": "Cancel",
+        "columns": {
+          "when": "Date",
+          "site": "Site",
+          "status": "Status",
+          "score": "Score",
+          "action": "Actions"
+        },
+        "status": {
+          "queued": "Queued",
+          "running": "Running",
+          "completed": "Completed",
+          "failed": "Failed"
+        }
+      },
+      "subscription": {
+        "title": "Subscription",
+        "description": "Billing and plan details will appear here after you connect a payment provider.",
+        "placeholder": "This template does not include subscriptions yet. You can plug in Stripe or similar when your product needs paid plans."
+      },
+      "settings": {
+        "title": "Account settings",
+        "agreementsAccordion": "Agreements",
+        "marketingSaveHint": "Save with the buttons at the bottom of this page, or together with your full profile on the Profile tab.",
+        "dangerIntro": "Deleting your account permanently removes your profile.",
+        "deleteAccount": "Delete account",
+        "dialogTitle": "Delete your account?",
+        "dialogBody": "This cannot be undone. Your profile will be permanently deleted.",
+        "cancel": "Cancel",
+        "confirmDelete": "Yes, delete my account",
+        "deleting": "Deleting…",
+        "errorDelete": "Could not delete account. Please try again or contact support."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong.",
+    "retry": "Try again",
+    "close": "Close",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "settings": {
+      "openMenu": "Open settings"
+    },
+    "theme": {
+      "switchToDark": "Switch to dark mode",
+      "switchToLight": "Switch to light mode"
+    }
+  },
+  "notFound": {
+    "metaTitle": "Page not found",
+    "metaDescription": "The page you are looking for does not exist or has been moved.",
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Go back home"
+  },
+  "pages": {
+    "home": {
+      "metaTitle": "Welcome",
+      "metaDescription": "A multilingual starter with accounts, a contact form, and legal pages.",
+      "heading": "Start your next web app here",
+      "intro": "This skeleton includes a bilingual shell, authentication, an account page, and placeholder pages you can replace."
+    },
+    "about": {
+      "metaTitle": "About",
+      "metaDescription": "About this website.",
+      "heading": "About",
+      "p1": "Replace this page with the story of the product you are building."
+    },
+    "contact": {
+      "metaTitle": "Contact",
+      "metaDescription": "Send a message to the team.",
+      "heading": "Contact",
+      "heroTitle": "Get in touch",
+      "intro": "Leave your details and we will reply by email.",
+      "directEmail": "Email",
+      "directPhone": "Phone",
+      "emailCopyAria": "Copy email address to clipboard",
+      "emailCopyHint": "Click to copy the address",
+      "emailCopySuccess": "Email address copied to clipboard.",
+      "phoneCopyAria": "Copy phone number to clipboard",
+      "phoneCopyHint": "Click to copy the number",
+      "phoneCopySuccess": "Phone number copied to clipboard."
+    },
+    "cookies": {
+      "metaTitle": "Cookie policy",
+      "metaDescription": "How this website uses cookies.",
+      "heading": "Cookie policy",
+      "lastUpdated": "Last updated: replace this date when you publish your policy.",
+      "p1": "Replace this placeholder with your cookie policy. The banner on this site can remember necessary, preference, and analytics choices."
+    },
+    "privacy": {
+      "metaTitle": "Privacy Policy",
+      "metaDescription": "How this website handles personal information.",
+      "heading": "Privacy Policy",
+      "lastUpdated": "Last updated: replace this date when you publish your policy.",
+      "p1": "Replace this placeholder with your privacy policy before collecting personal information from visitors."
+    },
+    "terms": {
+      "metaTitle": "Terms of Service",
+      "metaDescription": "Terms for using this website.",
+      "heading": "Terms of Service",
+      "lastUpdated": "Last updated: replace this date when you publish your terms.",
+      "p1": "Replace this placeholder with the terms that govern use of your website and accounts."
+    },
+    "accessibility": {
+      "metaTitle": "Accessibility statement",
+      "metaDescription": "Accessibility of this website.",
+      "heading": "Accessibility statement",
+      "lastUpdated": "Last updated: replace this date when you publish your statement.",
+      "p1": "Replace this placeholder with your accessibility statement."
+    }
+  }
+}

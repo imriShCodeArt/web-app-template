@@ -1,0 +1,86 @@
+name: Main source guard
+
+# Security boundary:
+# - Runs from the workflow version stored on the default branch.
+# - Reads pull-request metadata only; it never checks out or executes PR code.
+# - Publishes the `main-source-branch` status on the PR test-merge commit.
+#
+# Configure `main-source-branch` as a required status check in the `main`
+# branch ruleset. The ruleset must also require pull requests and block direct
+# pushes; this workflow alone cannot protect the branch.
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+      - edited
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
+concurrency:
+  group: main-source-guard-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate-source:
+    name: Publish main source guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Require preview from this repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          MERGE_SHA: ${{ github.event.pull_request.merge_commit_sha }}
+          CURRENT_REPOSITORY: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Pull request: ${HEAD_REPOSITORY}:${HEAD_REF} → ${BASE_REF}"
+
+          state="failure"
+          description="PRs to main must originate from this repository's preview branch"
+
+          if [[ "${BASE_REF}" == "main" \
+            && "${HEAD_REF}" == "preview" \
+            && "${HEAD_REPOSITORY}" == "${CURRENT_REPOSITORY}" ]]; then
+            state="success"
+            description="Valid release PR: preview to main"
+          fi
+
+          # PR CI normally runs against the test-merge commit. Publish this guard
+          # on the same SHA so all required checks are evaluated consistently.
+          # Fall back to the head SHA when GitHub cannot create a test merge, such
+          # as while the PR has merge conflicts.
+          status_sha="${MERGE_SHA:-${HEAD_SHA}}"
+
+          gh api \
+            --method POST \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            "repos/${CURRENT_REPOSITORY}/statuses/${status_sha}" \
+            --field state="${state}" \
+            --field context="main-source-branch" \
+            --field description="${description}" \
+            --field target_url="${RUN_URL}"
+
+          if [[ "${state}" != "success" ]]; then
+            echo "::error::${description}"
+            exit 1
+          fi
+
+          echo "${description}"

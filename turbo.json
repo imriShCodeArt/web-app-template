@@ -1,0 +1,96 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "remoteCache": {
+    "enabled": true
+  },
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_*",
+        "NEXT_PUBLIC_ANALYTICS_TRANSPORT",
+        "AUTH_SECRET",
+        "AUTH_URL",
+        "AUTH_COOKIE_DOMAIN",
+        "AUTH_GOOGLE_ID",
+        "AUTH_GOOGLE_SECRET",
+        "DATABASE_URL",
+        "DATABASE_URL_UNPOOLED",
+        "DATABASE_URL_NON_POOLING",
+        "NEON_DATABASE_URL",
+        "NEON_DATABASE_URL_UNPOOLED",
+        "NEON_POSTGRES_URL",
+        "NEON_POSTGRES_URL_UNPOOLED",
+        "NEON_POSTGRES_PRISMA_URL",
+        "POSTGRES_URL",
+        "POSTGRES_URL_NON_POOLING",
+        "POSTGRES_URL_UNPOOLED",
+        "POSTGRES_PRISMA_URL",
+        "PGHOST_UNPOOLED",
+        "PGUSER",
+        "PGPASSWORD",
+        "PGDATABASE",
+        "RESEND_API_KEY",
+        "CONTACT_FROM_EMAIL",
+        "CONTACT_TO_EMAIL",
+        "VERIFICATION_FROM_EMAIL"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "typecheck": {},
+    "format": {
+      "cache": false
+    },
+    "format:check": {},
+    "test": {},
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {},
+    "vercel-build": {
+      "cache": false,
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_*",
+        "NEXT_PUBLIC_ANALYTICS_TRANSPORT",
+        "AUTH_SECRET",
+        "AUTH_URL",
+        "AUTH_COOKIE_DOMAIN",
+        "AUTH_GOOGLE_ID",
+        "AUTH_GOOGLE_SECRET",
+        "DATABASE_URL",
+        "DATABASE_URL_UNPOOLED",
+        "DATABASE_URL_NON_POOLING",
+        "NEON_DATABASE_URL",
+        "NEON_DATABASE_URL_UNPOOLED",
+        "NEON_POSTGRES_URL",
+        "NEON_POSTGRES_URL_UNPOOLED",
+        "NEON_POSTGRES_PRISMA_URL",
+        "POSTGRES_URL",
+        "POSTGRES_URL_NON_POOLING",
+        "POSTGRES_URL_UNPOOLED",
+        "POSTGRES_PRISMA_URL",
+        "PGHOST_UNPOOLED",
+        "PGUSER",
+        "PGPASSWORD",
+        "PGDATABASE",
+        "MIGRATE_USE_APP_DATABASE_URL",
+        "RESEND_API_KEY",
+        "CONTACT_FROM_EMAIL",
+        "CONTACT_TO_EMAIL",
+        "VERIFICATION_FROM_EMAIL",
+        "CRON_SECRET"
+      ]
+    }
+  }
+}

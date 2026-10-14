@@ -1,0 +1,68 @@
+{
+  "name": "@template/platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "vercel-build": "yarn workspace @template/db db:migrate && yarn build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.3.1",
+    "@mui/material": "^9.3.1",
+    "@mui/material-nextjs": "^9.3.0",
+    "@mui/stylis-plugin-rtl": "^9.3.0",
+    "@template/auth": "workspace:*",
+    "@template/config": "workspace:*",
+    "@template/db": "workspace:*",
+    "@template/i18n": "workspace:*",
+    "@template/ui": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "next": "16.3.1",
+    "next-auth": "^5.0.0-beta.32",
+    "next-intl": "^4.13.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.85.0",
+    "stylis": "^4.4.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^26",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/stylis": "^4",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 111",
+    "safari >= 16.4"
+  ],
+  "packageManager": "yarn@4.12.0",
+  "engines": {
+    "node": "24.x",
+    "yarn": ">=4.0.0",
+    "npm": ">=999.0.0"
+  }
+}

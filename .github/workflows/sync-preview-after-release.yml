@@ -1,0 +1,71 @@
+name: Sync preview after release
+
+# A preview → main release PR creates one merge commit that exists only on
+# main. Fast-forward preview to that merge commit so the long-lived branches
+# remain aligned without a redundant synchronization PR.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-preview-after-release
+  cancel-in-progress: false
+
+jobs:
+  fast-forward-preview:
+    name: Fast-forward preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout released main commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+          token: ${{ secrets['PREVIEW_SYNC_TOKEN'] || github.token }}
+
+      - name: Verify release and fast-forward preview
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          main_sha="${GITHUB_SHA}"
+          git fetch --no-tags origin preview
+          preview_sha="$(git rev-parse origin/preview)"
+
+          if [[ "${preview_sha}" == "${main_sha}" ]]; then
+            echo "preview already points at ${main_sha}"
+            exit 0
+          fi
+
+          if ! git merge-base --is-ancestor "${preview_sha}" "${main_sha}"; then
+            echo "::error::preview (${preview_sha}) has commits that are not in main (${main_sha}); refusing to rewrite or merge the branch."
+            exit 1
+          fi
+
+          read -r -a commit_line <<<"$(git rev-list --parents -n 1 "${main_sha}")"
+          if (( ${#commit_line[@]} < 3 )); then
+            echo "::error::main HEAD is not a merge commit; only preview → main release merges may synchronize preview."
+            exit 1
+          fi
+
+          release_source_sha="${commit_line[2]}"
+          if [[ "${release_source_sha}" != "${preview_sha}" ]]; then
+            echo "::error::main HEAD was not merged from the current preview tip; refusing to synchronize."
+            echo "Expected second parent: ${preview_sha}"
+            echo "Actual second parent:   ${release_source_sha}"
+            exit 1
+          fi
+
+          echo "Fast-forwarding preview: ${preview_sha} → ${main_sha}"
+          if ! git push origin "${main_sha}:refs/heads/preview"; then
+            echo "::error::GitHub blocked the preview update. Allow the synchronization actor to bypass preview's pull-request requirement, or configure PREVIEW_SYNC_TOKEN as documented in .github/BRANCHING.md."
+            exit 1
+          fi

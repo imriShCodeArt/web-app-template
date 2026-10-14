@@ -1,0 +1,79 @@
+name: Tag patch release
+
+# Every push to main (release merges from preview) creates the next
+# semver patch tag (vX.Y.Z → vX.Y.Z+1) and a GitHub Release.
+# Skips when the commit is already version-tagged (manual tags / re-runs).
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tag-patch-release
+  cancel-in-progress: false
+
+jobs:
+  tag-patch:
+    name: Create patch tag
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+
+      - name: Bump patch tag and create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sha="${GITHUB_SHA}"
+
+          existing="$(git tag --points-at "${sha}" | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' || true)"
+          if [[ -n "${existing}" ]]; then
+            echo "Commit ${sha} already tagged as ${existing}; skipping."
+            exit 0
+          fi
+
+          latest="$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n 1 || true)"
+          if [[ -z "${latest}" ]]; then
+            echo "::error::No existing vX.Y.Z tag found to bump from."
+            exit 1
+          fi
+
+          if [[ ! "${latest}" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            echo "::error::Latest tag '${latest}' is not a valid vMAJOR.MINOR.PATCH."
+            exit 1
+          fi
+
+          major="${BASH_REMATCH[1]}"
+          minor="${BASH_REMATCH[2]}"
+          patch="${BASH_REMATCH[3]}"
+          next="v${major}.${minor}.$((patch + 1))"
+
+          if git rev-parse -q --verify "refs/tags/${next}" >/dev/null; then
+            echo "::error::Next tag ${next} already exists; refusing to overwrite."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "Tagging ${sha} as ${next} (bumped from ${latest})"
+          git tag -a "${next}" "${sha}" -m "Release ${next}"
+          git push origin "refs/tags/${next}"
+
+          gh release create "${next}" \
+            --target "${sha}" \
+            --title "${next}" \
+            --generate-notes
