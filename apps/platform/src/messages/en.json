@@ -404,7 +404,8 @@
       "metaDescription": "Accessibility of this website.",
       "heading": "Accessibility statement",
       "lastUpdated": "Last updated: replace this date when you publish your statement.",
-      "p1": "Replace this placeholder with your accessibility statement."
+      "p1": "Replace this placeholder with your accessibility statement.",
+      "externalLinkOpensNewWindow": "Opens in a new window."
     }
   }
 }
