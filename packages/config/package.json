@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@template/i18n": "workspace:*",
-    "zod": "^4.4.3"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^26",
